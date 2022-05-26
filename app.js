@@ -36,11 +36,11 @@ app.post("/", function(req, res) {
   };
   const jsonData = JSON.stringify(data);
 
-  const url = "https://us18.api.mailchimp.com/3.0/lists/e8d59fbf27";
+  const url = "https://us18.api.mailchimp.com/3.0/lists/{listID}";
 
   const options = {
     method: "POST",
-    auth: "cipher:a35f955061be7f760abbcc8ecd3684f4-us18",
+    auth: "cipher:*apiKey*",
   }
 
   const request = https.request(url, options, function(response) {
@@ -50,7 +50,7 @@ app.post("/", function(req, res) {
       res.sendFile(__dirname + "/failure.html");
     }
     response.on("data", function(data) {
-      console.log(JSON.parse(data));
+     // console.log(JSON.parse(data));
     })
   })
 
@@ -64,10 +64,3 @@ app.post("/", function(req, res) {
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server is up!!");
 });
-
-
-//API KEY
-//0242032787ded713e9a28fb31a80c517-us18
-
-//LIST ID
-//e8d59fbf27
