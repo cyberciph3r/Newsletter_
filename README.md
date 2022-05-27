@@ -1,4 +1,4 @@
 # Newsletter_
 
 
-https://enigmatic-temple-42721.herokuapp.com/
+Check out my Newsletter Signup page - https://enigmatic-temple-42721.herokuapp.com/
